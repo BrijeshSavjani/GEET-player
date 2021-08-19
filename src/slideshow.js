@@ -5,7 +5,7 @@ import './slideshow.css';
 import App from './App';
 import Card from './Card.js'
 import reportWebVitals from './reportWebVitals';
-function Slideshow()
+function Slideshow(props)
 {           
         var total_width = 0;
         var cards = [];
@@ -14,8 +14,7 @@ function Slideshow()
                 const card = React.createElement(Card,{},[]);
                 const parent = React.createElement("div",{class : "column"}, [card]);
                 cards.push(parent);
-                console.log(total_width);
-                total_width += 0.2 * (window.innerWidth);
+                total_width += parseFloat(props.CardWidth) * (window.innerWidth);
 
         }
         const table = React.createElement("div",{class : "table"},cards);
