@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Card from './Card.js'
 import Slideshow from './slideshow.js'
 import reportWebVitals from './reportWebVitals';

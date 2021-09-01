@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './slideshow.css';
-import App from './App';
 import Card from './Card.js'
 import reportWebVitals from './reportWebVitals';
 function Slideshow(props)
