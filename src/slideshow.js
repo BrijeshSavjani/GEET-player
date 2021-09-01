@@ -16,7 +16,7 @@ function Slideshow(props)
                 cards.push(parent);
                 total_width += parseFloat(props.CardWidth) * (window.innerWidth);
 
-        }
+        } 
         const table = React.createElement("div",{class : "table"},cards);
         ReactDOM.render(table,document.getElementById("root"));
          return(

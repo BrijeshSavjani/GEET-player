@@ -7,7 +7,7 @@
 {
     height: 100%;
     width:100%;
-    background-image: url('./404-album.jpg'); 
+    background-image: url('404-album.jpg'); 
     background-size: cover;
     position: relative;
     z-index: 0;
@@ -39,9 +39,16 @@
 {
     fill:white;
     width: 15%;
-    margin: 5%;
-    padding: 2.5%;
+    margin: 4.17%;
+    padding: 10%;
     background-color: black;
     opacity: 0.8;
     border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size:contain;
+    border-width: 0;
 }
+
+.play{background-image: url("play.svg");}
+.edit{background-image: url("edit.svg");}
+.delete{background-image: url("delete.svg");}
