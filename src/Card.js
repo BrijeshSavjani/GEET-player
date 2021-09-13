@@ -4,8 +4,8 @@ function Card(props)
 {
   // Code below sets CSS styles (and adds correct icon in bkg through CSS)
   var btn1;var btn2 = "icon play";var btn3;
-  if (props.Type =="Album"){btn1 = "icon add";btn3 = "icon queue"; }
-  if (props.Type == "Song"){btn1 = "icon edit";btn3 = "icon delete"; }
+  if (props.Type =="Song"){btn1 = "icon add";btn3 = "icon queue"; }
+  if (props.Type == "Album"){btn1 = "icon edit";btn3 = "icon delete"; }
         //Now moves onto actual card design
         return (
             <div style = {{height:"100%"}}>
