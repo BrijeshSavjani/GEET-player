@@ -49,8 +49,11 @@
     background-repeat: no-repeat;
     background-size:contain;
     border-width: 0;
+    
 }
 
 .play{background-image: url("assets/play.svg");}
 .edit{background-image: url("assets/edit.svg");}
 .delete{background-image: url("assets/delete.svg");}
+.queue{background-image: url("assets/queue.svg");}
+.add{background-image: url("assets/add.svg");}

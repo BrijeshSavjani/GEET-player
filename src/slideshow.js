@@ -10,28 +10,20 @@ function Slideshow(props)
         var cards = [];
         while(total_width < window.innerWidth)
         {
-                const card = React.createElement(Card,{},[]);
-                const parent = React.createElement("div",{class : "column"}, [card]);
+                var CardDetails = {"Type": "Song","Name": "Album Name", "Artists":"Artist Names"};
+                console.log(CardDetails);
+                const card = React.createElement(Card,CardDetails,[]);
+                const parent = React.createElement("div",{class : "column", height: (props.CardWidth * Window.innerWidth), width: props.CardWidth  }, [card]);
                 cards.push(parent);
                 total_width += parseFloat(props.CardWidth) * (window.innerWidth);
 
         } 
         const table = React.createElement("div",{class : "table"},cards);
         ReactDOM.render(table,document.getElementById("root"));
-         return(
-         <div style = {{height:"20vh"}}> 
-                 <button className = "Button"> {"<"} </button>
-                <div className= "table" style = {{display:"flex"}}>
-                         <div className = "Column"><Card /></div>
-                         <div className = "Column"><Card /></div>
-                         <div className = "Column"><Card /></div>
-                 </div>
-                 <button className = "Button" style = {{float:"right"}} > {">"} </button>
-
-         </div>
-         );
+         return(null);
+        
 
 
 }
       
-export default Slideshow;
+export default Slideshow; 
