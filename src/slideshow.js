@@ -11,9 +11,8 @@ function Slideshow(props)
         while(total_width < window.innerWidth)
         {
                 var CardDetails = {"Type": "Song","Name": "Album Name", "Artists":"Artist Names"};
-                console.log(CardDetails);
                 const card = React.createElement(Card,CardDetails,[]);
-                const parent = React.createElement("div",{class : "column", height: (props.CardWidth * Window.innerWidth), width: props.CardWidth  }, [card]);
+                const parent = React.createElement("div",{class : "column", height: (props.CardWidth * window.innerWidth), width: (props.CardWidth * window.innerWidth)  }, [card]);
                 cards.push(parent);
                 total_width += parseFloat(props.CardWidth) * (window.innerWidth);
 
