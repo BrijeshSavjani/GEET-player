@@ -5,17 +5,17 @@ import 'animate.css'
 import './slideshow.css';
 import Card from './Card.js'
 import reportWebVitals from './reportWebVitals';
-function ScrollForward()
+function ScrollForward(id)
 {
-    var slideshow = document.getElementById("table");
+    var slideshow = document.getElementById(id);
     slideshow.classList.add("animate__animated", "animate__backOutRight");
     slideshow.classList.remove("animate__backOutRight");
     slideshow.classList.add("animate__backInLeft");
     slideshow.addEventListener("animationend", () => {slideshow.classList.remove("animate__backInLeft");});
 }
-function ScrollBack()
+function ScrollBack(id)
 {
-    var slideshow = document.getElementById("table");
+    var slideshow = document.getElementById(id);
     slideshow.classList.add("animate__animated", "animate__backOutLeft");
     slideshow.classList.remove("animate__backOutLeft");
     slideshow.classList.add("animate__backInRight");
@@ -33,11 +33,11 @@ function Slideshow(props)
                 const parent = React.createElement("div",{class : "column", style : {width: (String(props.CardWidth * window.innerWidth)+ "px"), height: (String(props.CardWidth * window.innerWidth)+ "px")}}, [card]);
                 cards.push(parent);
                 total_width += parseFloat(props.CardWidth) * (window.innerWidth);
-
         } 
-        const LeftButton = React.createElement ("button", {class : "NavBtn", onClick : ScrollBack}, '<');
-        const RightButton = React.createElement ("button", {class : "NavBtn", onClick: ScrollForward}, '>');
-        const table = React.createElement("div",{class : "table"},[LeftButton,cards,RightButton]);
+        console.log(String(props.id));
+        const LeftButton = React.createElement ("button", {class : "NavBtn", onClick :() => {ScrollBack(String(props.id))}}, '<');
+        const RightButton = React.createElement ("button", {class : "NavBtn", onClick :() => {ScrollForward(String(props.id))}}, '>');
+        const table = React.createElement("div",{class : "table",id: String(props.id)},[LeftButton,cards,RightButton]);
         ReactDOM.render(table,document.getElementById("root"));
          return(null);
         

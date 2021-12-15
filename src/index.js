@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <div style = {{width:"100vw"}} style = {{height:"100%"}}>
-    <Slideshow CardWidth = "0.15" />
+    <Slideshow id = "RecentlyPlayed" CardWidth = "0.15" />
      
      </div>
   </React.StrictMode>,
