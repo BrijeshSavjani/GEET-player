@@ -13,6 +13,7 @@
     background-size: cover;
     position: relative;
     z-index: 0;
+
 }
 .AlbumArt
 {
@@ -28,13 +29,14 @@
     position:absolute;
     visibility: hidden;
 }
-.AlbumArt:hover .bkg
+.AlbumArt:hover  .bkg
 {
     opacity: 0.6;
 }
 .AlbumArt:hover  .icon-row
 {
     visibility: visible;
+
 }
 
 .icon

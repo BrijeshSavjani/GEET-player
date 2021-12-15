@@ -11,3 +11,12 @@
     max-height:100%;
     margin: 1.25%;
 }
+.NavBtn
+{
+border-radius: 100%;
+height: fit-content;
+padding: 1%;
+align-self: center;
+border-width:0;
+
+}
