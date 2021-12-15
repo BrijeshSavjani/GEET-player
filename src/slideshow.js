@@ -5,13 +5,21 @@ import 'animate.css'
 import './slideshow.css';
 import Card from './Card.js'
 import reportWebVitals from './reportWebVitals';
-function ScrollBack()
+function ScrollForward()
 {
     var slideshow = document.getElementById("table");
     slideshow.classList.add("animate__animated", "animate__backOutRight");
     slideshow.classList.remove("animate__backOutRight");
     slideshow.classList.add("animate__backInLeft");
     slideshow.addEventListener("animationend", () => {slideshow.classList.remove("animate__backInLeft");});
+}
+function ScrollBack()
+{
+    var slideshow = document.getElementById("table");
+    slideshow.classList.add("animate__animated", "animate__backOutLeft");
+    slideshow.classList.remove("animate__backOutLeft");
+    slideshow.classList.add("animate__backInRight");
+    slideshow.addEventListener("animationend", () => {slideshow.classList.remove("animate__backInRight");});
 }
 function Slideshow(props)
 {           
@@ -28,7 +36,7 @@ function Slideshow(props)
 
         } 
         const LeftButton = React.createElement ("button", {class : "NavBtn", onClick : ScrollBack}, '<');
-        const RightButton = React.createElement ("button", {class : "NavBtn", onClick: "ScrollForward"}, '>');
+        const RightButton = React.createElement ("button", {class : "NavBtn", onClick: ScrollForward}, '>');
         const table = React.createElement("div",{class : "table"},[LeftButton,cards,RightButton]);
         ReactDOM.render(table,document.getElementById("root"));
          return(null);
