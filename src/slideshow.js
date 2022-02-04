@@ -19,7 +19,7 @@ function ScrollBack(id)
     slideshow.classList.add("animate__animated", "animate__backOutLeft");
     slideshow.classList.remove("animate__backOutLeft");
     slideshow.classList.add("animate__backInRight");
-    slideshow.addEventListener("animationend", () => {slideshow.classList.remove("animate__backInRight");});
+     
 }
 function Slideshow(props)
 {           

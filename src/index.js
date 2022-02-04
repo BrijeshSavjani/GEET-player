@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Card from './Card.js'
 import Slideshow from './slideshow.js'
 import reportWebVitals from './reportWebVitals';
+import SignIn from './SignIn.js';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <div style = {{width:"100vw"}} style = {{height:"100%"}}>
-    <Slideshow id = "RecentlyPlayed" CardWidth = "0.15" />
+    <SignIn/>
      
      </div>
   </React.StrictMode>,
